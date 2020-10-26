@@ -1,0 +1,32 @@
+{
+  "name": "pokemon-desk",
+  "version": "1.0.0",
+  "description": "Tutorial app for ReactJS Pro Edition Marathon, by Zar Zakharov",
+  "main": "index.js",
+  "repository": "git@github.com:Settimov7/PokemonDesk.git",
+  "author": "Nikita Prytkov <prytkov.nikita.set@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "classnames": "2.2.6",
+    "cross-env": "7.0.2",
+    "css-loader": "5.0.0",
+    "html-webpack-plugin": "4.5.0",
+    "sass": "1.27.0",
+    "sass-loader": "10.0.4",
+    "style-loader": "2.0.0",
+    "ts-loader": "8.0.7",
+    "typescript": "4.0.3",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server",
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+  }
+}
