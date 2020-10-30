@@ -6,7 +6,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
 	mode: NODE_ENV,
-	entry: path.resolve(__dirname, 'src/index.js'),
+	entry: path.resolve(__dirname, 'src/index.tsx'),
 	resolve: {
 		extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
 	},
@@ -25,6 +25,7 @@ module.exports = {
 				test: /\.(s*)css$/,
 				use: [
 					'style-loader',
+					'css-modules-typescript-loader',
 					{
 						loader: 'css-loader',
 						options: {
