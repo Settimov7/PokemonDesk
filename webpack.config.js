@@ -6,7 +6,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
 	mode: NODE_ENV,
-	entry: path.resolve(__dirname, 'src/index.tsx'),
+	entry: path.resolve(__dirname, 'src/index.ts'),
 	resolve: {
 		extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
 	},
@@ -22,17 +22,21 @@ module.exports = {
 				exclude: /node_modules/,
 			},
 			{
-				test: /\.(s*)css$/,
+				test: /\.css$/,
+				use: ['style-loader', 'css-loader'],
+			},
+			{
+				test: /\.scss$/,
 				use: [
 					'style-loader',
-					'css-modules-typescript-loader',
+					'css-modules-typescript-loader?modules',
 					{
 						loader: 'css-loader',
 						options: {
 							modules: {
 								mode: 'local',
 								localIdentName: '[name]__[local]__[hash:base64:5]',
-								auto: /\.modules\.\w+$/i,
+								auto: /\.module\.\w+$/i,
 							},
 						},
 					},

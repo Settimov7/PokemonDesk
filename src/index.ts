@@ -9,4 +9,4 @@ const ROOT_ID = 'root';
 
 const rootElement = document.getElementById(ROOT_ID);
 
-ReactDOM.render(<App/>, rootElement);
+ReactDOM.render(React.createElement(App), rootElement);

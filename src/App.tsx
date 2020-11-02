@@ -1,9 +1,7 @@
 import React, { FC } from 'react';
-import classNames from 'classnames';
 
-import style from './App.modules.scss';
-import './custom.css';
+import style from './App.module.scss';
 
 export const App: FC = () => (
-	<div className={ classNames(style.header, 'color') }>This is App Component!</div>
+	<div className={ style.header }>This is App Component!</div>
 );
