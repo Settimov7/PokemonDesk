@@ -27,21 +27,30 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        exclude: [/\.global\.scss/],
         use: [
           'style-loader',
-          'css-modules-typescript-loader?modules',
+          'css-modules-typescript-loader',
           {
             loader: 'css-loader',
             options: {
               modules: {
                 mode: 'local',
                 localIdentName: '[name]__[local]__[hash:base64:5]',
-                auto: /\.module\.\w+$/i,
+                exportLocalsConvention: 'camelCaseOnly',
               },
             },
           },
           'sass-loader',
         ],
+      },
+      {
+        test: /\.global\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        use: ['file-loader'],
       },
     ],
   },
