@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 
-import styles from './logo.styles.scss';
+import styles from './styles/logo.styles.scss';
 
-import logo from './logo.svg';
+import logoUrl from './assets/logo.svg';
 
 type Props = {
   className?: string;
@@ -11,6 +11,6 @@ type Props = {
 
 export const Logo: FC<Props> = ({ className }) => (
   <a className={classNames(className, styles.logo)} href="/">
-    <img className={styles.logoImage} src={logo} alt="Pokemon home page" />
+    <img className={styles.logoImage} src={logoUrl} alt="Pokemon home page" />
   </a>
 );

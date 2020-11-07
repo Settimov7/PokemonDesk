@@ -17,7 +17,8 @@ module.exports = {
     'no-console': 'error',
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx', '.ts', '.js'] }],
     'import/prefer-default-export': 'off',
-    'react/prop-types': 0,
+    'react/prop-types': 'off',
+    'react/jsx-key': 2,
     'import/extensions': [
       'error',
       'ignorePackages',

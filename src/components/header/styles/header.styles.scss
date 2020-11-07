@@ -1,5 +1,5 @@
 .header {
-  background-color: var(--third);
+  box-shadow: 0 4px 16px rgba(1, 28, 64, 0.2);
 }
 
 .header__menu-list {
@@ -11,14 +11,19 @@
 }
 
 @media (max-width: 768px) {
-  .header__navigation {
+  .header {
     position: relative;
 
-    box-sizing: border-box;
     padding: 22px 26px 12px;
   }
 
-  .header__navigation--opened {
+  .header--opened {
+    padding: 37px 26px 44px;
+
+    border-radius: 0 0 16px 16px;
+  }
+
+  .header--opened {
     padding: 37px 26px 44px;
 
     .header__logo {

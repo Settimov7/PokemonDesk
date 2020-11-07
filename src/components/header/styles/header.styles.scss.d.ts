@@ -5,8 +5,8 @@ interface CssExports {
   'headerLogo': string;
   'headerMenuList': string;
   'headerNavigation': string;
-  'headerNavigationOpened': string;
   'headerOpenMenuButton': string;
+  'headerOpened': string;
 }
 export const cssExports: CssExports;
 export default cssExports;
