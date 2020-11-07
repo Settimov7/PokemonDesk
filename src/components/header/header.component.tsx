@@ -10,13 +10,13 @@ import { ReactComponent as CrossSvg } from './assets/cross.svg';
 
 import styles from './styles/header.styles.scss';
 
-type Props = {
+interface IProps {
   menuItems: ReadonlyArray<IMenuItem>;
   isMenuOpened: boolean;
   openMenuButtonClickHandler: MouseEventHandler<HTMLButtonElement>;
-};
+}
 
-export const HeaderComponent: FC<Props> = ({ menuItems, isMenuOpened, openMenuButtonClickHandler }) => {
+export const HeaderComponent: FC<IProps> = ({ menuItems, isMenuOpened, openMenuButtonClickHandler }) => {
   const headerClassName = classNames(styles.header, isMenuOpened && styles.headerOpened);
 
   return (
