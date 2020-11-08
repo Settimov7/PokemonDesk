@@ -61,6 +61,18 @@ module.exports = {
         test: [/\.jpe?g$/, /\.png$/],
         use: ['url-loader'],
       },
+      {
+        test: /\.woff2$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
