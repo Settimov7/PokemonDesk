@@ -59,26 +59,38 @@
   }
 
   .home-page__link {
-    margin-top: 33px;
+    margin: 33px auto 0;
   }
 }
 
 @media (min-width: 1440px) {
   .home-page__wrapper {
     position: relative;
+
+    margin-top: 128px;
   }
 
   .home-page__parallax {
     position: absolute;
     right: 0;
-    width: 55vw;
+
+    width: 55%;
     height: 727px;
   }
 
   .home-page__content {
     box-sizing: border-box;
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 768px 0 157px;
+  }
+
+  .home-page__description {
+    font-size: var(--font-size-l);
+    margin: 64px 0 0;
+  }
+
+  .home-page__link {
+    margin-top: 64px;
   }
 }

@@ -129,3 +129,23 @@
     }
   }
 }
+
+@media (min-width: 1440px) {
+  .header__navigation {
+    padding: 14px 144px 16px;
+  }
+
+  .header__logo {
+    width: 157px;
+    height: 63px;
+    margin-right: 300px;
+  }
+
+  .header__menu-list {
+    gap: 54px;
+  }
+
+  .header__menu-item {
+    font-size: var(--font-size-m);
+  }
+}

@@ -8,6 +8,14 @@
   margin: 0;
 }
 
+.heading--font-weight-normal {
+  --font-weight: 400;
+}
+
+.heading--font-weight-bold {
+  --font-weight: 700;
+}
+
 @media (max-width: 767px) {
   .heading {
     --font-size: var(--font-size-l);
@@ -26,7 +34,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   .heading {
     --font-size: var(--font-size-xxl);
   }
@@ -42,12 +50,4 @@
   .heading--font-size-s {
     --font-size: var(--font-size-s);
   }
-}
-
-.heading--font-weight-normal {
-  --font-weight: 400;
-}
-
-.heading--font-weight-bold {
-  --font-weight: 700;
 }

@@ -58,7 +58,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   .button {
     font-size: var(--font-size-m);
     padding: 17px 32px 22px;
@@ -67,6 +67,5 @@
   .button--block {
     display: flex;
     width: fit-content;
-    margin: 0 auto;
   }
 }
