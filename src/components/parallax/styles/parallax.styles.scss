@@ -1,4 +1,5 @@
 .parallax {
+  background-clip: content-box;
   background-repeat: no-repeat;
   background-size: 72% auto, 45% auto, 20% auto, 27% auto, 41% auto;
   background-position: calc(2% + (var(--mouse-x, 0px) * 0.01)) calc(100% + (var(--mouse-y, 0px) * 0.01)),

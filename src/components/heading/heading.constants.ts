@@ -10,21 +10,15 @@ export const HeadingLevel = {
 } as const;
 
 export const HeadingFontSize = {
-  XXL: 'xxl',
-  XL: 'xl',
   L: 'l',
   M: 'm',
   S: 's',
-  XS: 'xs',
 } as const;
 
 export const HeadingFontSizeToCSSFontSizeClassName = {
-  [HeadingFontSize.XXL]: styles.headingFontSizeXxl,
-  [HeadingFontSize.XL]: styles.headingFontSizeXl,
   [HeadingFontSize.L]: styles.headingFontSizeL,
   [HeadingFontSize.M]: styles.headingFontSizeM,
   [HeadingFontSize.S]: styles.headingFontSizeS,
-  [HeadingFontSize.XS]: styles.headingFontSizeXs,
 };
 
 export const HeadingFontWeight = {

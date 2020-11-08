@@ -10,13 +10,13 @@
 
 @media (max-width: 767px) {
   .footer {
-    font-size: var(--font-size-xs);
     text-align: center;
 
     padding: 16px;
   }
 
   .footer__team-text {
+    font-size: var(--font-size-s);
     font-weight: 700;
 
     margin-bottom: 4px;
@@ -30,5 +30,10 @@
     justify-content: space-between;
     align-items: baseline;
     padding: 20px;
+  }
+
+  .footer__team-text {
+    font-size: var(--font-size-s);
+    font-weight: 700;
   }
 }

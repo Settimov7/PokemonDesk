@@ -32,13 +32,17 @@
 @media (min-width: 768px) and (max-width: 1439px) {
   .home-page__wrapper {
     position: relative;
+
+    margin-top: 18px;
   }
 
   .home-page__parallax {
     position: absolute;
+    left: 50%;
+
     width: 706px;
     height: 539px;
-    left: 50%;
+
     transform: translateX(-50%);
   }
 
@@ -46,11 +50,12 @@
     text-align: center;
 
     padding: 0 60px;
-    margin-top: 497px;
+    margin-top: 479px;
   }
 
   .home-page__description {
-    margin-top: 6px;
+    font-size: var(--font-size-m);
+    margin: 6px 0 0;
   }
 
   .home-page__link {

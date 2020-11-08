@@ -5,9 +5,6 @@ interface CssExports {
   'headingFontSizeL': string;
   'headingFontSizeM': string;
   'headingFontSizeS': string;
-  'headingFontSizeXl': string;
-  'headingFontSizeXs': string;
-  'headingFontSizeXxl': string;
   'headingFontWeightBold': string;
   'headingFontWeightNormal': string;
 }

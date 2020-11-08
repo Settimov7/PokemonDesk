@@ -11,6 +11,12 @@
   list-style: none;
 }
 
+.header__menu-item {
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
 @media (max-width: 767px) {
   .header {
     position: relative;
@@ -48,9 +54,6 @@
 
     .header__menu-item {
       font-size: var(--font-size-m);
-      font-weight: 400;
-      text-decoration: none;
-      color: inherit;
 
       display: block;
     }
@@ -100,5 +103,29 @@
 
   .header__menu-list {
     gap: 24px;
+  }
+
+  .header__menu-item {
+    font-size: var(--font-size-s);
+  }
+
+  .header__menu-item:hover {
+    position: relative;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+
+      display: block;
+      width: 120%;
+      height: 3px;
+      border-radius: 25%;
+
+      background-color: var(--black);
+      transform: translate(-50%);
+    }
   }
 }
