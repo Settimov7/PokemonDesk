@@ -9,6 +9,13 @@
   --green: #73d677;
   --yellow: #f2cb07;
   --black: #000000;
+
+  --font-size-xxl: 72px;
+  --font-size-xl: 64px;
+  --font-size-l: 36px;
+  --font-size-m: 24px;
+  --font-size-s: 18px;
+  --font-size-xs: 16px;
 }
 
 /* karla-regular - latin */
@@ -47,7 +54,8 @@
 
 body {
   font-family: 'Karla', sans-serif;
-  font-size: 14px;
+  font-size: var(--font-size-xs);
+  line-height: 1.2;
 
   min-width: 375px;
   margin: 0;
