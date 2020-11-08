@@ -1,0 +1,54 @@
+.parallax {
+  background-repeat: no-repeat;
+  background-size: 72% auto, 45% auto, 20% auto, 27% auto, 41% auto;
+  background-position: calc(2% + (var(--mouse-x, 0px) * 0.01)) calc(100% + (var(--mouse-y, 0px) * 0.01)),
+    calc(111% + (var(--mouse-x, 0px) * 0.012)) calc(-10% + (var(--mouse-y, 0px) * 0.012)),
+    calc(10% + (var(--mouse-x, 0px) * 0.015)) calc(9% + (var(--mouse-y, 0px) * 0.015)),
+    calc(4% + (var(--mouse-x, 0px) * 0.017)) calc(63% + (var(--mouse-y, 0px) * 0.017)),
+    calc(71% + (var(--mouse-x, 0px) * 0.017)) calc(4% + (var(--mouse-y, 0px) * 0.017));
+}
+
+@media (max-width: 767px) {
+  .parallax {
+    background-image: url('../../../components/parallax/assets/pikachu-mobile@1x.png'),
+      url('../../../components/parallax/assets/pokeball.svg'), url('../../../components/parallax/assets/r-pokeball.svg'),
+      url('../../../components/parallax/assets/cloud.svg'), url('../../../components/parallax/assets/cloud.svg');
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url('../../../components/parallax/assets/pikachu-mobile@2x.png'),
+        url('../../../components/parallax/assets/pokeball.svg'),
+        url('../../../components/parallax/assets/r-pokeball.svg'), url('../../../components/parallax/assets/cloud.svg'),
+        url('../../../components/parallax/assets/cloud.svg');
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .parallax {
+    background-image: url('../../../components/parallax/assets/pickachu-tablet@1x.png'),
+      url('../../../components/parallax/assets/pokeball.svg'), url('../../../components/parallax/assets/r-pokeball.svg'),
+      url('../../../components/parallax/assets/cloud.svg'), url('../../../components/parallax/assets/cloud.svg');
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url('../../../components/parallax/assets/pickachu-tablet@2x.png'),
+        url('../../../components/parallax/assets/pokeball.svg'),
+        url('../../../components/parallax/assets/r-pokeball.svg'), url('../../../components/parallax/assets/cloud.svg'),
+        url('../../../components/parallax/assets/cloud.svg');
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .parallax {
+    background-image: url('../../../components/parallax/assets/pikachu-desktop@1x.png'),
+      url('../../../components/parallax/assets/pokeball.svg'), url('../../../components/parallax/assets/r-pokeball.svg'),
+      url('../../../components/parallax/assets/cloud.svg'), url('../../../components/parallax/assets/cloud.svg');
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url('../../../components/parallax/assets/pikachu-desktop@2x.png'),
+        url('../../../components/parallax/assets/pokeball.svg'),
+        url('../../../components/parallax/assets/r-pokeball.svg'), url('../../../components/parallax/assets/cloud.svg'),
+        url('../../../components/parallax/assets/cloud.svg');
+    }
+  }
+}
