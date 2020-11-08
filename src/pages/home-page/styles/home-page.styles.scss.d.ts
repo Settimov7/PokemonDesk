@@ -4,7 +4,6 @@ interface CssExports {
   'homePage': string;
   'homePageContent': string;
   'homePageDescription': string;
-  'homePageFooter': string;
   'homePageHeading': string;
   'homePageLink': string;
   'homePageParallax': string;

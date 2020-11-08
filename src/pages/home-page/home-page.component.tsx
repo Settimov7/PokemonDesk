@@ -1,8 +1,6 @@
 import React, { FC } from 'react';
 
 import { PageLayout } from '../../components/page-layout/page-layout.component';
-import { Header } from '../../components/header/header.container';
-import { Footer } from '../../components/footer/footer.component';
 import { Button } from '../../components/button/button.component';
 import { Parallax } from '../../components/parallax/parallax.container';
 import { HeadingComponent } from '../../components/heading/heading.component';
@@ -14,9 +12,7 @@ export const HomePage: FC = () => {
   return (
     <div className={styles.homePage}>
       <PageLayout>
-        <Header />
-
-        <main className={styles.homePageWrapper}>
+        <div className={styles.homePageWrapper}>
           <Parallax className={styles.homePageParallax} />
 
           <section className={styles.homePageContent}>
@@ -32,9 +28,7 @@ export const HomePage: FC = () => {
               See pokemons
             </Button>
           </section>
-        </main>
-
-        <Footer className={styles.homePageFooter} />
+        </div>
       </PageLayout>
     </div>
   );

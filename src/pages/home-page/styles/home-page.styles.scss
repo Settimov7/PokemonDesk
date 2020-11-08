@@ -9,25 +9,23 @@
   }
 
   .home-page__content {
+    text-align: center;
+    font-size: var(--font-size-m);
+
     padding: 0 26px 0;
   }
 
   .home-page__heading {
     width: 84%;
     margin: 0 auto;
-    text-align: center;
   }
 
   .home-page__description {
-    margin-top: 6px;
+    margin: 6px 0 0;
   }
 
   .home-page__link {
     margin-top: 42px;
-  }
-
-  .home-page__footer {
-    margin-top: 28px;
   }
 }
 
@@ -45,12 +43,10 @@
   }
 
   .home-page__content {
+    text-align: center;
+
     padding: 0 60px;
     margin-top: 497px;
-  }
-
-  .home-page__heading {
-    text-align: center;
   }
 
   .home-page__description {
@@ -59,10 +55,6 @@
 
   .home-page__link {
     margin-top: 33px;
-  }
-
-  .home-page__footer {
-    margin-top: 62px;
   }
 }
 

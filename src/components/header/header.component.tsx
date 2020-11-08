@@ -38,7 +38,9 @@ export const HeaderComponent: FC<IProps> = ({ menuItems, isMenuOpened, openMenuB
         <ul className={styles.headerMenuList} id="menu__list">
           {menuItems.map(({ id, text, url }) => (
             <li key={id}>
-              <Link to={url}>{text}</Link>
+              <Link className={styles.headerMenuItem} to={url}>
+                {text}
+              </Link>
             </li>
           ))}
         </ul>

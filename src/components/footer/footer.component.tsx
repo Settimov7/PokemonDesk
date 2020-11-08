@@ -14,7 +14,7 @@ export const Footer: FC<IProps> = ({ className }) => {
     <footer className={componentClassName}>
       <p className={styles.footerTeamText}>Ours Team</p>
       <p className={styles.footerTagline}>
-        Make with
+        Make with&nbsp;
         <span role="img" aria-hidden="true" aria-label="red heart">
           ❤️
         </span>
