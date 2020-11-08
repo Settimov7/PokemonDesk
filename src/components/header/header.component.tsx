@@ -1,5 +1,6 @@
 import React, { FC, MouseEventHandler } from 'react';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
 import { Logo } from '../logo/logo.component';
 
@@ -37,7 +38,7 @@ export const HeaderComponent: FC<IProps> = ({ menuItems, isMenuOpened, openMenuB
         <ul className={styles.headerMenuList} id="menu__list">
           {menuItems.map(({ id, text, url }) => (
             <li key={id}>
-              <a href={url}>{text}</a>
+              <Link to={url}>{text}</Link>
             </li>
           ))}
         </ul>

@@ -1,5 +1,6 @@
 import React, { ButtonHTMLAttributes, FC } from 'react';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
 import { ButtonColor, ButtonColorToCssColorClassName, ButtonType } from './button.constants';
 
@@ -33,9 +34,9 @@ export const Button: FC<IProps> = ({
 
   if (href) {
     return (
-      <a className={componentClassName} href={href}>
+      <Link className={componentClassName} to={href}>
         {children}
-      </a>
+      </Link>
     );
   }
 
