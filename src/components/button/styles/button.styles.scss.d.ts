@@ -3,6 +3,7 @@
 interface CssExports {
   'button': string;
   'buttonBlock': string;
+  'buttonDefault': string;
   'buttonPrimary': string;
   'buttonSecondary': string;
   'buttonSmall': string;

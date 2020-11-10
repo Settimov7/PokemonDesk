@@ -11,7 +11,17 @@ export const ButtonColor = {
   SECONDARY: 'secondary',
 } as const;
 
-export const ButtonColorToCssColorClassName = {
+export const ButtonColorToCSSColorClassName = {
   [ButtonColor.PRIMARY]: styles.buttonPrimary,
   [ButtonColor.SECONDARY]: styles.buttonSecondary,
+};
+
+export const ButtonSize = {
+  SMALL: 'small',
+  DEFAULT: 'default',
+} as const;
+
+export const ButtonSizeToCSSSizeClassName = {
+  [ButtonSize.SMALL]: styles.buttonSmall,
+  [ButtonSize.DEFAULT]: styles.buttonDefault,
 };

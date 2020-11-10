@@ -1,8 +1,14 @@
-import React, { ButtonHTMLAttributes, FC } from 'react';
+import React, { FC } from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
-import { ButtonColor, ButtonColorToCssColorClassName, ButtonType } from './button.constants';
+import {
+  ButtonColor,
+  ButtonColorToCSSColorClassName,
+  ButtonSize,
+  ButtonSizeToCSSSizeClassName,
+  ButtonType,
+} from './button.constants';
 
 import { ValueOf } from '../../types';
 
@@ -11,9 +17,9 @@ import styles from './styles/button.styles.scss';
 interface IProps {
   href?: string;
   color?: ValueOf<typeof ButtonColor>;
-  type?: ButtonHTMLAttributes<HTMLBodyElement>['type'];
+  type?: ValueOf<typeof ButtonType>;
+  size?: ValueOf<typeof ButtonSize>;
   isBlock?: boolean;
-  isSmall?: boolean;
   className?: string;
 }
 
@@ -22,14 +28,14 @@ export const Button: FC<IProps> = ({
   href,
   color = ButtonColor.PRIMARY,
   type = ButtonType.BUTTON,
+  size = ButtonSize.DEFAULT,
   isBlock = false,
-  isSmall = false,
   className = '',
 }) => {
-  const colorClassName = ButtonColorToCssColorClassName[color];
-  const componentClassName = classNames(className, styles.button, colorClassName, {
+  const colorClassName = ButtonColorToCSSColorClassName[color];
+  const sizeClassName = ButtonSizeToCSSSizeClassName[size];
+  const componentClassName = classNames(className, styles.button, colorClassName, sizeClassName, {
     [styles.buttonBlock]: isBlock,
-    [styles.buttonSmall]: isSmall,
   });
 
   if (href) {
