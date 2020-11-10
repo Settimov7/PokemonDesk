@@ -5,9 +5,58 @@
   --danger: #d93e30;
   --white: #f6f7f9;
   --dark: #212121;
+
+  --green: #73d677;
+  --yellow: #f2cb07;
+  --black: #000000;
+
+  --font-size-xxl: 72px;
+  --font-size-xl: 64px;
+  --font-size-l: 36px;
+  --font-size-m: 24px;
+  --font-size-s: 18px;
+  --font-size-xs: 16px;
+}
+
+/* karla-regular - latin */
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Karla'), local('Karla-Regular'), url('./fonts/karla-v13-latin-regular.woff2') format('woff2');
+}
+/* karla-italic - latin */
+@font-face {
+  font-family: 'Karla';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Karla Italic'), local('Karla-Italic'), url('./fonts/karla-v13-latin-italic.woff2') format('woff2');
+}
+/* karla-700 - latin */
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Karla Bold'), local('Karla-Bold'), url('./fonts/karla-v13-latin-700.woff2') format('woff2');
+}
+/* karla-700italic - latin */
+@font-face {
+  font-family: 'Karla';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Karla Bold Italic'), local('Karla-BoldItalic'),
+    url('./fonts/karla-v13-latin-700italic.woff2') format('woff2');
 }
 
 body {
+  font-family: 'Karla', sans-serif;
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+
   min-width: 375px;
   margin: 0;
 }

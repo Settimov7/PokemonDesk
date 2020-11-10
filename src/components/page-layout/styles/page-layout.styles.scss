@@ -1,0 +1,23 @@
+.page-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+@media (max-width: 767px) {
+  .page-layout__footer {
+    margin-top: 28px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .page-layout__footer {
+    margin-top: 62px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page-layout__footer {
+    margin-top: 181px;
+  }
+}

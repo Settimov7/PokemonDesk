@@ -1,5 +1,6 @@
 import React, { FC, MouseEventHandler } from 'react';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
 import { Logo } from '../logo/logo.component';
 
@@ -10,13 +11,13 @@ import { ReactComponent as CrossSvg } from './assets/cross.svg';
 
 import styles from './styles/header.styles.scss';
 
-type Props = {
+interface IProps {
   menuItems: ReadonlyArray<IMenuItem>;
   isMenuOpened: boolean;
   openMenuButtonClickHandler: MouseEventHandler<HTMLButtonElement>;
-};
+}
 
-export const HeaderComponent: FC<Props> = ({ menuItems, isMenuOpened, openMenuButtonClickHandler }) => {
+export const HeaderComponent: FC<IProps> = ({ menuItems, isMenuOpened, openMenuButtonClickHandler }) => {
   const headerClassName = classNames(styles.header, isMenuOpened && styles.headerOpened);
 
   return (
@@ -37,7 +38,9 @@ export const HeaderComponent: FC<Props> = ({ menuItems, isMenuOpened, openMenuBu
         <ul className={styles.headerMenuList} id="menu__list">
           {menuItems.map(({ id, text, url }) => (
             <li key={id}>
-              <a href={url}>{text}</a>
+              <Link className={styles.headerMenuItem} to={url}>
+                {text}
+              </Link>
             </li>
           ))}
         </ul>

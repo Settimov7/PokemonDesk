@@ -19,6 +19,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
     'react/jsx-key': 2,
+    'react/button-has-type': 0,
     'import/extensions': [
       'error',
       'ignorePackages',

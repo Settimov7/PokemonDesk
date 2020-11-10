@@ -3,16 +3,22 @@
 }
 
 .footer__tagline {
+  // TODO: подключить шрифт Source Sans Pro
+
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer {
     text-align: center;
+
     padding: 16px;
   }
 
   .footer__team-text {
+    font-size: var(--font-size-s);
+    font-weight: 700;
+
     margin-bottom: 4px;
   }
 }
@@ -24,5 +30,16 @@
     justify-content: space-between;
     align-items: baseline;
     padding: 20px;
+  }
+
+  .footer__team-text {
+    font-size: var(--font-size-s);
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    padding: 33px 127px;
   }
 }
