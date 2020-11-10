@@ -1,21 +1,14 @@
 import React, { FC } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { useRoutes } from 'hookrouter';
 
-import { HomePage } from '../pages/home-page/home-page.component';
-import { PokedexPage } from '../pages/pokedex-page/pokedex-page.component';
+import { routes } from '../routing/routing.constants';
 
 export const App: FC = () => {
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
+  const pageComponent = useRoutes(routes);
 
-        <Route path="/pokedex">
-          <PokedexPage />
-        </Route>
-      </Switch>
-    </BrowserRouter>
-  );
+  if (!pageComponent) {
+    return <h1>404</h1>;
+  }
+
+  return pageComponent;
 };

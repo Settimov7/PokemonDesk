@@ -3,6 +3,7 @@
 interface CssExports {
   'pageLayout': string;
   'pageLayoutFooter': string;
+  'pageLayoutHome': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

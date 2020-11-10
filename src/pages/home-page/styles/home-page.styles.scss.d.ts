@@ -7,7 +7,6 @@ interface CssExports {
   'homePageHeading': string;
   'homePageLink': string;
   'homePageParallax': string;
-  'homePageWrapper': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

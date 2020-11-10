@@ -1,7 +1,3 @@
-.home-page {
-  background-image: linear-gradient(180deg, var(--third) 0%, var(--primary) 0%);
-}
-
 @media (max-width: 767px) {
   .home-page__parallax {
     height: max(76vw, 287px);
@@ -30,7 +26,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
-  .home-page__wrapper {
+  .home-page {
     position: relative;
 
     margin-top: 18px;
@@ -64,7 +60,7 @@
 }
 
 @media (min-width: 1440px) {
-  .home-page__wrapper {
+  .home-page {
     position: relative;
 
     margin-top: 128px;

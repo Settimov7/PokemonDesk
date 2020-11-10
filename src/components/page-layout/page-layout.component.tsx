@@ -1,16 +1,28 @@
 import React, { FC } from 'react';
+import classNames from 'classnames';
 
 import { Header } from '../header/header.container';
 import { Footer } from '../footer/footer.component';
 
 import styles from './styles/page-layout.styles.scss';
 
-export const PageLayout: FC = ({ children }) => (
-  <main className={styles.pageLayout}>
-    <Header />
+interface IProps {
+  contentClassName?: string;
+  isHomePageLayout?: boolean;
+}
 
-    {children}
+export const PageLayout: FC<IProps> = ({ contentClassName, children, isHomePageLayout = false }) => {
+  const componentClassName = classNames(styles.pageLayout, {
+    [styles.pageLayoutHome]: isHomePageLayout,
+  });
 
-    <Footer className={styles.pageLayoutFooter} />
-  </main>
-);
+  return (
+    <main className={componentClassName}>
+      <Header />
+
+      {contentClassName ? <div className={contentClassName}>{children}</div> : children}
+
+      <Footer className={styles.pageLayoutFooter} />
+    </main>
+  );
+};
