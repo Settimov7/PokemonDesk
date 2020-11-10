@@ -19,7 +19,7 @@ interface IProps {
   className?: string;
 }
 
-export const HeadingComponent: FC<IProps> = ({
+export const Heading: FC<IProps> = ({
   level,
   className,
   children,
