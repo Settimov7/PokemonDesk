@@ -1,10 +1,10 @@
 import React, { FC, MouseEventHandler } from 'react';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import { A } from 'hookrouter';
 
 import { Logo } from '../logo/logo.component';
 
-import { IMenuItem } from './header.types';
+import { IMenuItem } from '../../routing/routing.types';
 
 import { ReactComponent as BurgerMenuSvg } from './assets/burger-menu.svg';
 import { ReactComponent as CrossSvg } from './assets/cross.svg';
@@ -38,9 +38,9 @@ export const HeaderComponent: FC<IProps> = ({ menuItems, isMenuOpened, openMenuB
         <ul className={styles.headerMenuList} id="menu__list">
           {menuItems.map(({ id, text, url }) => (
             <li key={id}>
-              <Link className={styles.headerMenuItem} to={url}>
+              <A className={styles.headerMenuItem} href={url}>
                 {text}
-              </Link>
+              </A>
             </li>
           ))}
         </ul>

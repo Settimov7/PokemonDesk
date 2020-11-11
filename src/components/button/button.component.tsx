@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import { A } from 'hookrouter';
 
 import {
   ButtonColor,
@@ -40,9 +40,9 @@ export const Button: FC<IProps> = ({
 
   if (href) {
     return (
-      <Link className={componentClassName} to={href}>
+      <A className={componentClassName} href={href}>
         {children}
-      </Link>
+      </A>
     );
   }
 

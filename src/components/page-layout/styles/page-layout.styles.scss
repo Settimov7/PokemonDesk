@@ -4,6 +4,10 @@
   min-height: 100vh;
 }
 
+.page-layout--home {
+  background-image: linear-gradient(180deg, var(--third) 0%, var(--primary) 0%);
+}
+
 @media (max-width: 767px) {
   .page-layout__footer {
     margin-top: 28px;

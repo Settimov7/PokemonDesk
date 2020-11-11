@@ -1,0 +1,85 @@
+.card {
+  position: relative;
+
+  display: flex;
+  box-sizing: border-box;
+  min-width: 350px;
+  padding: 5px 25px 13px;
+  border-radius: 8px;
+
+  overflow: hidden;
+  background-size: 66%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(270deg, #b33327 0.15%, #d93e30 100%);
+  box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
+}
+
+.card__stats {
+  display: flex;
+  margin: 13px 0 0;
+  gap: 13px;
+}
+
+.card__stats-item {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.card__stats-data {
+  text-align: center;
+
+  box-sizing: border-box;
+  min-width: 36px;
+  padding: 3px;
+  border: 3px solid var(--dark);
+  border-radius: 50%;
+  margin: 0 0 6px;
+}
+
+.card__types {
+  display: flex;
+  margin: 11px 0 0;
+  gap: 12px;
+}
+
+.card__types-title {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.card__types-data {
+  font-size: 12px;
+  text-transform: capitalize;
+
+  padding: 2px 16px;
+  margin: 0;
+  border-radius: 11px;
+
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+}
+
+.card__types-data--grass {
+  background-color: #73d677;
+}
+
+.card__types-data--poison {
+  background-color: #07d6f2;
+}
+
+.card__image {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+
+  width: 160px;
+  height: 160px;
+
+  transform: translateY(-50%);
+}

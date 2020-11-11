@@ -20,6 +20,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/jsx-key': 2,
     'react/button-has-type': 0,
+    'no-param-reassign': 0,
     'import/extensions': [
       'error',
       'ignorePackages',

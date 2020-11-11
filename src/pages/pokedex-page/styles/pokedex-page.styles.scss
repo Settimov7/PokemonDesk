@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+  .pokedex-page {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .pokedex-page {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .pokedex-page {
+    padding: 0 157px;
+  }
+}
