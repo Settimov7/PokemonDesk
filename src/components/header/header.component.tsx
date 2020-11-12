@@ -4,6 +4,8 @@ import { A } from 'hookrouter';
 
 import { Logo } from '../logo/logo.component';
 
+import { Route } from '../../routing/routing.constants';
+
 import { IMenuItem } from '../../routing/routing.types';
 
 import { ReactComponent as BurgerMenuSvg } from './assets/burger-menu.svg';
@@ -23,7 +25,7 @@ export const HeaderComponent: FC<IProps> = ({ menuItems, isMenuOpened, openMenuB
   return (
     <header className={headerClassName}>
       <nav className={styles.headerNavigation}>
-        <Logo className={styles.headerLogo} />
+        <Logo className={styles.headerLogo} href={Route.HOME} />
 
         <button
           className={styles.headerOpenMenuButton}
