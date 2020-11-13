@@ -4,6 +4,7 @@ interface CssExports {
   'header': string;
   'headerLogo': string;
   'headerMenuItem': string;
+  'headerMenuItemActive': string;
   'headerMenuList': string;
   'headerNavigation': string;
   'headerOpenMenuButton': string;

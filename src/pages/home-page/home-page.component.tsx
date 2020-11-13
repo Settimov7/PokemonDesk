@@ -1,9 +1,11 @@
 import React, { FC } from 'react';
 
+import { Parallax } from '../../components/parallax/parallax.container';
 import { PageLayout } from '../../components/page-layout/page-layout.component';
 import { Button } from '../../components/button/button.component';
-import { Parallax } from '../../components/parallax/parallax.container';
 import { Heading } from '../../components/heading/heading.component';
+
+import { Route } from '../../routing/routing.constants';
 import { HeadingLevel } from '../../components/heading/heading.constants';
 
 import styles from './styles/home-page.styles.scss';
@@ -21,7 +23,7 @@ export const HomePage: FC = () => (
         You can know the type of Pokemon, its strengths, disadvantages and abilities
       </p>
 
-      <Button className={styles.homePageLink} isBlock href="/pokedex">
+      <Button className={styles.homePageLink} isBlock href={Route.POKEDEX}>
         See pokemons
       </Button>
     </section>

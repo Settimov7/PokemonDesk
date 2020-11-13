@@ -1,8 +1,10 @@
 import React, { FC, MouseEventHandler } from 'react';
 import classNames from 'classnames';
-import { A } from 'hookrouter';
+import { A, usePath } from 'hookrouter';
 
 import { Logo } from '../logo/logo.component';
+
+import { Route } from '../../routing/routing.constants';
 
 import { IMenuItem } from '../../routing/routing.types';
 
@@ -18,12 +20,13 @@ interface IProps {
 }
 
 export const HeaderComponent: FC<IProps> = ({ menuItems, isMenuOpened, openMenuButtonClickHandler }) => {
+  const path = usePath();
   const headerClassName = classNames(styles.header, isMenuOpened && styles.headerOpened);
 
   return (
     <header className={headerClassName}>
       <nav className={styles.headerNavigation}>
-        <Logo className={styles.headerLogo} />
+        <Logo className={styles.headerLogo} href={Route.HOME} />
 
         <button
           className={styles.headerOpenMenuButton}
@@ -36,13 +39,20 @@ export const HeaderComponent: FC<IProps> = ({ menuItems, isMenuOpened, openMenuB
         </button>
 
         <ul className={styles.headerMenuList} id="menu__list">
-          {menuItems.map(({ id, text, url }) => (
-            <li key={id}>
-              <A className={styles.headerMenuItem} href={url}>
-                {text}
-              </A>
-            </li>
-          ))}
+          {menuItems.map(({ id, text, url }) => {
+            const isActiveItem = path === url;
+            const itemClassName = classNames(styles.headerMenuItem, {
+              [styles.headerMenuItemActive]: isActiveItem,
+            });
+
+            return (
+              <li key={id}>
+                <A className={itemClassName} href={url}>
+                  {text}
+                </A>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>

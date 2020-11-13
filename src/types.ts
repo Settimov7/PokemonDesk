@@ -11,6 +11,24 @@ interface IStats {
   speed: number;
 }
 
+export interface IRawPokemon {
+  // eslint-disable-next-line camelcase
+  name_clean: string;
+  abilities: ReadonlyArray<string>;
+  stats: IStats;
+  types: ReadonlyArray<string>;
+  img: string;
+  name: string;
+  // eslint-disable-next-line camelcase
+  base_experience: number;
+  height: number;
+  id: number;
+  // eslint-disable-next-line camelcase
+  is_default: boolean;
+  order: number;
+  weight: number;
+}
+
 export interface IPokemon {
   nameClean: string;
   abilities: ReadonlyArray<ValueOf<typeof Ability> | string>;

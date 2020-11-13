@@ -6,29 +6,36 @@ import { PokedexPage } from '../pages/pokedex-page/pokedex-page.component';
 
 import { IMenuItem } from './routing.types';
 
+export const Route = {
+  HOME: '/',
+  POKEDEX: '/pokedex',
+  LEGENDARY: '/legendary',
+  DOCUMENTATION: '/documentation',
+} as const;
+
 export const MENU_ITEMS: ReadonlyArray<IMenuItem> = [
   {
     id: '1',
     text: 'Home',
-    url: '/',
+    url: Route.HOME,
     pageComponent: () => <HomePage />,
   },
   {
     id: '2',
     text: 'Pokedex',
-    url: '/pokedex',
+    url: Route.POKEDEX,
     pageComponent: () => <PokedexPage />,
   },
   {
     id: '3',
     text: 'Legendary',
-    url: '/legendary',
+    url: Route.LEGENDARY,
     pageComponent: () => <h1>Legendary</h1>,
   },
   {
     id: '4',
     text: 'Documentation',
-    url: '/documentation',
+    url: Route.DOCUMENTATION,
     pageComponent: () => <h1>Documentation</h1>,
   },
 ];

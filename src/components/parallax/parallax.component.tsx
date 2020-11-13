@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useRef } from 'react';
 import classNames from 'classnames';
 
 import styles from './styles/parallax.styles.scss';
@@ -10,11 +10,14 @@ interface IProps {
 }
 
 export const ParallaxComponent: FC<IProps> = ({ mouseX, mouseY, className }) => {
+  const elementRef = useRef<HTMLDivElement | null>(null);
   const componentStyleName = classNames(className, styles.parallax);
-  const style = {
-    ['--mouse-x' as any]: `${mouseX}px`,
-    ['--mouse-y' as any]: `${mouseY}px`,
-  };
+  const elementStyleObject = elementRef?.current?.style;
 
-  return <div style={style} className={componentStyleName} />;
+  if (elementStyleObject) {
+    elementStyleObject.setProperty('--mouse-x', `${mouseX}px`);
+    elementStyleObject.setProperty('--mouse-y', `${mouseY}px`);
+  }
+
+  return <div className={componentStyleName} ref={elementRef} />;
 };
