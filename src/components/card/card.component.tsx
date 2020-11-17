@@ -5,7 +5,7 @@ import { Heading } from '../heading/heading.component';
 
 import { HeadingFontWeight, HeadingLevel, HeadingFontSize } from '../heading/heading.constants';
 
-import { IPokemon } from '../../types';
+import { IPokemon } from '../../pokemon/pokemon.types';
 
 import styles from './styles/card.styles.scss';
 

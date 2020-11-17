@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { Card } from '../card/card.component';
 
-import { IPokemon } from '../../types';
+import { IPokemon } from '../../pokemon/pokemon.types';
 
 import styles from './styles/card-list.styles.scss';
 

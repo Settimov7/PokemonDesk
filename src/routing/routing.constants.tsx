@@ -2,7 +2,7 @@ import React from 'react';
 import { HookRouter } from 'hookrouter';
 
 import { HomePage } from '../pages/home-page/home-page.component';
-import { PokedexPage } from '../pages/pokedex-page/pokedex-page.component';
+import { PokedexPage } from '../pages/pokedex-page/pokedex-page.container';
 
 import { IMenuItem } from './routing.types';
 
