@@ -1,16 +1,23 @@
-import React, { FC } from 'react';
+import React, { ChangeEventHandler, FC } from 'react';
 
 import { PageLayout } from '../../components/page-layout/page-layout.component';
 import { CardList } from '../../components/card-list/card-list.container';
 
 import styles from './styles/pokedex-page.styles.scss';
 
-export const PokedexPage: FC = () => (
+interface IProps {
+  searchValue: string;
+  changeHandler: ChangeEventHandler<HTMLInputElement>;
+}
+
+export const PokedexPageComponent: FC<IProps> = ({ searchValue, changeHandler }) => (
   <PageLayout contentClassName={styles.pokedexPage}>
     <div>
       <h1>PokedexPage</h1>
 
-      <CardList />
+      <input type="text" value={searchValue} onChange={changeHandler} />
+
+      <CardList searchQuery={searchValue} />
     </div>
   </PageLayout>
 );

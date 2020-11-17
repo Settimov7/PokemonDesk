@@ -2,11 +2,27 @@ import React, { FC } from 'react';
 
 import { CardListComponent } from './card-list.component';
 
-import { usePokemons } from './hooks/use-pokemons';
-import { State } from './hooks/use-pokemons.constants';
+import { rawResponseDataParse } from './utils/raw-response-data-parse';
+import { useData } from '../../hooks/use-data/use-data.hook';
 
-export const CardList: FC = () => {
-  const [data, state] = usePokemons();
+import { State } from '../../hooks/use-data/use-data.constants';
+import { RequestName } from '../../request/request.constants';
+
+import { IRawResponseData, IResponseData } from './card-list.types';
+
+interface IProps {
+  searchQuery?: string;
+}
+
+export const CardList: FC<IProps> = ({ searchQuery }) => {
+  const options = {
+    requestName: RequestName.GET_POKEMONS,
+    dependencies: [searchQuery],
+    query: {
+      name: searchQuery,
+    },
+  };
+  const [data, state] = useData<IRawResponseData, IResponseData>(options, rawResponseDataParse);
   const pokemons = data?.pokemons ?? [];
 
   if (state === State.FETCHING) {

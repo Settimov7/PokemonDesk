@@ -1,5 +1,4 @@
-import { IPokemon, IRawPokemon, ValueOf } from '../../../types';
-import { State } from './use-pokemons.constants';
+import { IPokemon, IRawPokemon } from '../../pokemon/pokemon.types';
 
 export interface IResponseCommonData {
   count: number;
@@ -15,5 +14,3 @@ export interface IRawResponseData extends IResponseCommonData {
 export interface IResponseData extends IResponseCommonData {
   pokemons: ReadonlyArray<IPokemon>;
 }
-
-export type TState = ValueOf<typeof State>;
