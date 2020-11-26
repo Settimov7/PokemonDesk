@@ -10,32 +10,37 @@ import { IPokemon } from '../../pokemon/pokemon.types';
 import styles from './styles/card.styles.scss';
 
 interface IProps {
-  pokemon: IPokemon;
+  href: string;
+  name: string;
+  image: string;
+  attack: number;
+  defense: number;
+  types: IPokemon['types'];
 }
 
-export const Card: FC<IProps> = ({ pokemon }) => (
-  <article className={styles.card}>
+export const Card: FC<IProps> = ({ href, name, image, attack, defense, types }) => (
+  <a href={href} className={styles.card}>
     <div>
       <Heading level={HeadingLevel.THIRD} fontSize={HeadingFontSize.S} fontWeight={HeadingFontWeight.BOLD}>
-        {pokemon.name}
+        {name}
       </Heading>
 
       <dl className={styles.cardStats}>
         <div className={styles.cardStatsItem}>
           <dt>Attack</dt>
-          <dd className={styles.cardStatsData}>{pokemon.stats.attack}</dd>
+          <dd className={styles.cardStatsData}>{attack}</dd>
         </div>
 
         <div className={styles.cardStatsItem}>
           <dt>Deffence</dt>
-          <dd className={styles.cardStatsData}>{pokemon.stats.defense}</dd>
+          <dd className={styles.cardStatsData}>{defense}</dd>
         </div>
       </dl>
 
       <dl className={styles.cardTypes}>
         <dt className={styles.cardTypesTitle}>Types</dt>
 
-        {pokemon.types.map((type) => {
+        {types.map((type) => {
           const typeClassName = classNames(styles.cardTypesData, styles.cardTypesDataGrass);
 
           return (
@@ -47,6 +52,6 @@ export const Card: FC<IProps> = ({ pokemon }) => (
       </dl>
     </div>
 
-    <img className={styles.cardImage} src={pokemon.img} alt={pokemon.name} />
-  </article>
+    <img className={styles.cardImage} src={image} alt={name} />
+  </a>
 );

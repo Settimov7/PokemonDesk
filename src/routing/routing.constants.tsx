@@ -4,13 +4,15 @@ import { HookRouter } from 'hookrouter';
 import { HomePage } from '../pages/home-page/home-page.component';
 import { PokedexPage } from '../pages/pokedex-page/pokedex-page.container';
 
-import { IMenuItem } from './routing.types';
+import { IMenuItem, IRouteItem } from './routing.types';
+import { PokemonPageComponent } from '../pages/pokemon-page/pokemon-page.component';
 
 export const Route = {
   HOME: '/',
   POKEDEX: '/pokedex',
   LEGENDARY: '/legendary',
   DOCUMENTATION: '/documentation',
+  POKEMON: '/pokedex/:id',
 } as const;
 
 export const MENU_ITEMS: ReadonlyArray<IMenuItem> = [
@@ -40,8 +42,18 @@ export const MENU_ITEMS: ReadonlyArray<IMenuItem> = [
   },
 ];
 
-export const routes = MENU_ITEMS.reduce<HookRouter.RouteObject>((routesAcc, { url, pageComponent }) => {
-  routesAcc[url] = pageComponent;
+export const ROUTE_ITEMS: ReadonlyArray<IRouteItem> = [
+  {
+    url: Route.POKEMON,
+    pageComponent: ({ id }) => <PokemonPageComponent id={id} />,
+  },
+];
 
-  return routesAcc;
-}, {});
+export const routes = [...MENU_ITEMS, ...ROUTE_ITEMS].reduce<HookRouter.RouteObject>(
+  (routesAcc, { url, pageComponent }) => {
+    routesAcc[url] = pageComponent;
+
+    return routesAcc;
+  },
+  {},
+);

@@ -1,6 +1,9 @@
 .card {
   position: relative;
 
+  text-decoration: none;
+  color: inherit;
+
   display: flex;
   box-sizing: border-box;
   min-width: 350px;
