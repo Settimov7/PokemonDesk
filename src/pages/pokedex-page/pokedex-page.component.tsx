@@ -7,17 +7,18 @@ import styles from './styles/pokedex-page.styles.scss';
 
 interface IProps {
   searchValue: string;
+  searchQuery: string;
   changeHandler: ChangeEventHandler<HTMLInputElement>;
 }
 
-export const PokedexPageComponent: FC<IProps> = ({ searchValue, changeHandler }) => (
+export const PokedexPageComponent: FC<IProps> = ({ searchValue, searchQuery, changeHandler }) => (
   <PageLayout contentClassName={styles.pokedexPage}>
     <div>
       <h1>PokedexPage</h1>
 
       <input type="text" value={searchValue} onChange={changeHandler} />
 
-      <CardList searchQuery={searchValue} />
+      <CardList searchQuery={searchQuery} />
     </div>
   </PageLayout>
 );
