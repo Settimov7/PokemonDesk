@@ -1,20 +1,29 @@
 import { UrlObject } from 'url';
 
-import { API_SERVER, RequestName, RequestConfig } from '../request.constants';
-
 import { IRequestOptions } from '../request.types';
-import { ValueOf } from '../../types';
+import { API_SERVER_CONFIG, REQUEST_CONFIG } from '../request.constants';
 
-export function getUrlWithParamsConfig(requestName: ValueOf<typeof RequestName>, options?: IRequestOptions): UrlObject {
-  const { protocol, host, apiPath } = API_SERVER;
+export function getUrlWithParamsConfig(requestName: string, options: IRequestOptions = {}): UrlObject {
+  const { query, params, serverConfig = API_SERVER_CONFIG, requestConfig = REQUEST_CONFIG } = options;
+  const { protocol, host, apiPath } = serverConfig;
 
-  const requestConfig = RequestConfig[requestName];
-  const pathName = apiPath + requestConfig.uri.pathName;
+  const currentRequestConfig = requestConfig[requestName];
+  let pathName = apiPath + currentRequestConfig?.uri?.pathName ?? '';
+
+  if (params) {
+    pathName = Object.entries(params).reduce((resultPathName, [key, value]) => {
+      if (value) {
+        return resultPathName.replace(`{${key}}`, value);
+      }
+
+      return resultPathName;
+    }, pathName);
+  }
 
   return {
     protocol,
     host,
     pathname: pathName,
-    query: options?.query,
+    query,
   };
 }
