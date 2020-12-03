@@ -8,5 +8,5 @@
     "jsx": "react",
     "sourceMap": true
   },
-  "exclude": ["dist", "./webpack.config.js"]
+  "exclude": ["dist", "./webpack.config.js", "./webpack.client.config.js", "./webpack.server.config.js"]
 }
